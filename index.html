@@ -278,7 +278,7 @@
         setUiState(false, true, "Scanning...");
 
         bleDevice = await navigator.bluetooth.requestDevice({
-          filters: [{ name: "SmartBike" }],
+          acceptAllDevices: true,
           optionalServices: [SERVICE_UUID]
         });
 
